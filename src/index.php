@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@700&family=Poppins:wght@700&display=swap" rel="stylesheet">
     <title>TRM del día</title>
 </head>
 
@@ -28,11 +27,12 @@
             </nav>
         </div>
     </header>
+
     <main>
         <div class="container">
-            <div class="control_trm">
-                <h2 class="trm">
-                    Valor del dólar e indicadores en <span class="trm_colombia">Colombia</span>
+            <div class="trm">
+                <h2 class="title">
+                    Valor del dólar e indicadores en <span>Colombia</span>
                 </h2>
                 <!-- DolarWeb IndMin Start -->
                 <div id="IndicadoresMin">
@@ -42,46 +42,67 @@
                 </div>
                 <script src="https://dolar.wilkinsonpc.com.co/widgets/gratis/indicadores-economicos-min.js?ancho=170&alto=85&fondo=transparent&fsize=10&ffamily=sans-serif&fcolor=000000"></script>
                 <!-- DolarWeb IndMin End -->
-                <div class="convertidor">
-                    <h2 class="trm">
-                        Convertidor de
-                        <span class="trm_colombia">Dólares a Pesos</span>
-                    </h2>
-                    <div class="grid_convertidor">
-                        <label class="valdolares">Dólares</label>
-                        <input class="dolares" id="dolar" type="number">
-                        <Label class="valdolares">Pesos</Label>
-                        <input type="text" class="pesos" readonly>
-                    </div>
-                    <div class="btn_convert">
-                        <input class="btn boton--primario calc-convert" type="submit" id="convertir" value="Convertir">
-                    </div>
-                </div>
             </div>
-            <div class="control_calculadora">
-                <h2 class="calculadora">Calculadora de días <span class="calculadora_viaje">de viaje </span></h2>
-                <div class="campo">
-                    <label class="inicio" for="inicio">
-                        <h3>Fecha inicio de viaje</h3>
-                    </label>
-                    <label class="fin" for="inicio">
-                        <h3>Fecha de Regreso</h3>
-                    </label>
-                    <input class="inicio_date" type="date" id="inicio_date">
-                    <input class="fin_date" type="date" id="fin_date">
-                </div>
-                <div class="btncal">
-                    <input class="boton boton--primario calc-days" id="dias" type="submit" value="Calcular Días">
-                </div>
-                <div class="resultado">
-                    <input class="resultado_dias" type="text" id="calculo_dias" placeholder="Días de viaje" readonly>
-                </div>
+            <div class="convertidor">
+                <h2 class="title">
+                    Convertidor de <span>Dólares a Pesos</span>
+                </h2>
+                <form class="form-convertidor">
+                    <div class="mb-3">
+                        <label for="dolar" class="form-label valdolares">Dólares</label>
+                        <input type="number" class="form-control" id="dolar">
+                    </div>
+                    <div class="mb-3">
+                        <label for="pesos" class="form-label valdolares">Pesos</label>
+                        <input type="text" class="form-control" id="pesos" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-primary" id="convertir">Convertir</button>
+                    </div>
+                </form>
+            </div>
+            <div class="calc-viajes">
+                <h2 class="title">Calculadora de días <span>de viaje </span></h2>
+                <form class="form-viajes">
+                    <div class="mb-3">
+                        <label for="inicio" class="inicio">Fecha inicio de viaje</label>
+                        <input type="date" class="form-control" id="inicio">
+                    </div>
+                    <div class="mb-3">
+                        <label class="fin" for="inicio">Fecha de Regreso</label>
+                        <input type="date" class="form-control" id="fin">
+                    </div>
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-primary" id="dias">Calcular Días</button>
+                    </div>
+                </form>
+            </div>
+            <div class="calc-tarifas">
+                <h2 class="title">Calculadora de <span>Tarifas</span></h2>
+                <form class="form-tarifas">
+                    <div class="mb-3">
+                        <label for="inicio" class="inicio">Ubicación</label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Seleccione ubicación</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="kilometros" for="inicio">Kilómetros</label>
+                        <input type="text" class="form-control" id="kilometros">
+                    </div>
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-primary" id="dias">Calcular Tarifa</button>
+                    </div>
+                </form>
             </div>
         </div>
+        <div class="hidden">
+            <input type="hidden" id="dolar_value" class="hidden" value="<?php echo $dolarRealValue ?>">
+        </div>
     </main>
-    <div class="hidden">
-        <input type="hidden" id="dolar_value" class="hidden" value="<?php echo $dolarRealValue ?>">
-    </div>
 
     <footer class="footer">
         <div class="container">
