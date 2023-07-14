@@ -1,0 +1,256 @@
+:root {
+    --primario: #004370;
+    --secundario: #22b9dc;
+    --fuentePrincipal: 'Poppins', 'sans serif';
+    --blanco: #fff;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+/* Globales */
+body {
+    background-color: var(--blanco);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+h3{
+    font-family: var(--fuentePrincipal);
+    color: var(--primario);
+
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+.navegacion {
+    display: flex;
+    gap: 4rem;
+}
+
+.navegacion__enlace {
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primario);
+    font-family: var(--fuentePrincipal);
+    border: none;
+}
+.contenedor{
+    width: min(90%, 120rem);
+    margin: 0 auto;
+}
+.contenedor_nav {
+    padding-top: 4rem;
+}
+
+@media (min-width: 768px) {
+    .contenedor_nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+} 
+
+.titulo_recomendacion{
+    color: var(--primario);
+}
+.titulo_recomendacion,
+.titulo_planes {
+    font-size: 5rem;
+    text-align: center;
+    font-family: var(--fuentePrincipal);
+    padding-top: 4rem;
+    
+}
+.titulo_planes {
+    color: var(--secundario);
+}
+
+.mejor{
+    font-family: var(--fuentePrincipal);
+    color: var(--primario);
+    text-transform: none;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    border-bottom: .2rem solid var(--secundario);
+    
+}
+
+.planes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.aplicaciones{
+
+    font-family: var(--fuentePrincipal);
+    text-align: center;
+    padding-top: 2.4rem;
+}
+
+.app_medias {
+    margin-top: 0;
+    padding-bottom: 5rem;
+    
+}
+
+.viaje {
+    background-color: var(--blanco);
+    border: 3px solid var(--secundario);
+    border-radius: 12px;
+    padding: 1.2rem;
+    font-family: var(--fuentePrincipal);
+    
+}
+
+.btn_dias {
+    padding-top: 2.6rem;
+}
+
+.plan {
+    background-color: var(--blanco);
+    border: 3px solid var(--secundario);
+    border-radius: 12px;
+    padding: 1rem;
+    font-family:var(--fuentePrincipal);
+    text-align: center;
+    width: 25rem;
+}
+
+.btn_plan{
+    padding-top: 2.6rem;
+}
+
+.plan:hover {
+
+    cursor: pointer;
+}
+
+.viaje:hover {
+    cursor: pointer;
+}
+
+.tipodedatos{
+    font-family: var(--fuentePrincipal);
+    text-align: center;
+    margin-top: 0;
+}
+
+.ambos_tipos{
+    padding-top: 2rem;
+}
+
+.error {
+    background-color: #b3dfeb;
+    font-weight: bold;
+    font-family: var(--fuentePrincipal);
+    text-align: center;
+    padding: 1rem;
+    width: auto;
+    color: var(--blanco);
+    background: radial-gradient(ellipse at center, rgba(179,220,237,1) 0%, rgba(179,220,237,1) 34%, rgba(188,224,238,1) 100%);
+    text-transform: uppercase;
+    border-radius: 74px 74px 74px 74px;
+    -moz-border-radius: 74px 74px 74px 74px;
+    -webkit-border-radius: 74px 74px 74px 74px;
+    border: 0px solid #000000;
+}
+.exitoso {
+    background-color: rgb(15, 125, 158);
+    text-align: center;
+    padding: 1rem;
+    color: var(--blanco);
+    text-transform: uppercase;
+    font-family: var(--fuentePrincipal);
+
+}
+
+
+#envio_recomendar {
+    background-color: var(--blanco);
+    border: 3px solid var(--secundario);
+    font-family: var(--fuentePrincipal);
+    border-radius: 1rem;
+    padding: 1rem;
+    color: var(--primario);
+    cursor: pointer;
+    width: 30rem;
+}
+
+.enviar_datos{
+    display: flex;
+    justify-content: center;
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+}   
+
+.opciones_app{
+
+    padding-top: 3.3rem;
+}
+
+.select_pais {
+    padding-top: 3rem;
+}
+
+.tipo_uso,
+.uso_frecuente {
+    padding-top: 3rem;
+}
+
+
+.datos_uso,
+.alta_capacidad,
+.llamadas_uso {
+    font-size: 1.7rem;
+    font-family: var(--fuentePrincipal);
+    color: var(--primario);
+}
+
+.apps {
+    background-color: var(--blanco);
+    border: 3px solid var(--secundario);
+    border-radius: 12px;
+    padding: 1rem;
+    font-family: var(--fuentePrincipal);
+    text-align: center;
+    width: 25rem;
+}
+
+.resultado{
+    font-family: var(--fuentePrincipal);
+
+    padding-top: 3rem;
+    color: var(--secundario);
+}
+
+.campo{
+    padding-top: 2rem;
+}
+
+.datos_llamadas{
+    padding-top: 3.5rem;
+
+}
+
+.plan,
+.apps,
+.viaje:focus {
+    outline: none !important;
+    border:.3rem solid var(--secundario);
+    box-shadow: 0 0 .2rem #719ECE;
+}
