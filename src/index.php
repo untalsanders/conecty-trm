@@ -1,25 +1,3 @@
-<?php
-$ch = curl_init();
-
-curl_setopt($ch, CURLOPT_URL, 'https://www.superfinanciera.gov.co/SuperfinancieraWebServiceTRM/TCRMServicesWebService/TCRMServicesWebService?wsdl');
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_POST, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS, "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" \nxmlns:act=\"http://action.trm.services.generic.action.superfinanciera.nexura.sc.com.co/\">\n<soapenv:Header/>\n<soapenv:Body>\n<act:queryTCRM>\n</act:queryTCRM>\n</soapenv:Body>\n</soapenv:Envelope>");
-
-$headers = array();
-$headers[] = 'Content-Type: text/xml';
-$headers[] = 'Accept: text/json';
-curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-
-$result = curl_exec($ch);
-if (curl_errno($ch)) {
-    echo 'Error:' . curl_error($ch);
-}
-curl_close($ch);
-
-$dolarValue = json_encode($result, true);
-$dolarRealValue = substr($dolarValue, 490, 6);
-?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -27,8 +5,7 @@ $dolarRealValue = substr($dolarValue, 490, 6);
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="preload" href="css/styles.css" as="style">
     <link rel="stylesheet" href="css/styles.css">
@@ -101,7 +78,9 @@ $dolarRealValue = substr($dolarValue, 490, 6);
     <div class="hidden">
         <input type="hidden" id="dolar_value" class="hidden" value="<?php echo $dolarRealValue ?>">
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script defer src="js/converter.js"></script>
 </body>
-<script src="js/script.js"></script>
 
 </html>
