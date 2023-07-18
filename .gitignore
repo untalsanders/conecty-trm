@@ -3,3 +3,4 @@ conf/
 ssl/
 tmp/
 local_backups
+vendor/

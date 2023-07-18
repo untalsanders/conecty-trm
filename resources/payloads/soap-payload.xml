@@ -1,0 +1,7 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:act="http://action.trm.services.generic.action.superfinanciera.nexura.sc.com.co/">
+    <soapenv:Header />
+    <soapenv:Body>
+        <act:queryTCRM>
+        </act:queryTCRM>
+    </soapenv:Body>
+</soapenv:Envelope>

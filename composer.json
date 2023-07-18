@@ -1,0 +1,32 @@
+{
+    "type": "project",
+    "require": {
+        "php": "8.*",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^7.7",
+        "php-di/php-di": "^7.0",
+        "slim/psr7": "1.5.0",
+        "slim/slim": "4.10.0",
+        "slim/twig-view": "3.3.0",
+        "vlucas/phpdotenv": "^5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "TCRM\\": "app"
+        },
+        "files": [
+            "app/functions.php"
+        ]
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "dev": "php -S 0.0.0.0:8000 -t public"
+    },
+    "config": {
+        "process-timeout": 0,
+        "sort-packages": true
+    }
+}

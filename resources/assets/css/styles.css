@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primario: #004370;
+    --secundario: #22b9dc;
+    --font-main: 'Poppins', 'sans serif';
+    --bg-header: #222;
+    --bg-footer: #004370;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: var(--font-main);
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    align-items: center;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* Globales */
+h3 {
+    color: var(--primario);
+}
+
+a {
+    text-decoration: none;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid #22b9dc;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.container {
+    max-width: clamp(70vw, 70vw, 80vw);
+}
+
+/* Header */
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.header .container .logo {
+    padding: .8rem 0;
+    width: min-content;
+}
+
+.header .container .logo a img {
+    width: 50%;
+    min-width: 220px;
+}
+
+.header .container .navegation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .container .navegation a {
+    padding: 1rem;
+    color: var(--primario);
+    font-family: var(--font-main);
+}
+
+/* Main */
+main {
+    padding: clamp(2rem, 3rem, 4rem) 0;
+}
+
+main .container > * {
+    padding: clamp(1rem, 2rem, 3rem) 0;
+}
+
+.title {
+    color: var(--primario);
+    font-weight: 800;
+}
+
+.title span {
+    color: var(--secundario);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--bg-footer);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
