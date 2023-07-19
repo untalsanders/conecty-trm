@@ -9,7 +9,9 @@ html {
     font-size: 62.5%;
 }
 
-*, *:before, *:after{
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
@@ -20,10 +22,9 @@ body {
     line-height: 1.5;
 }
 
-h3{
+h3 {
     font-family: var(--fuentePrincipal);
     color: var(--primario);
-
 }
 
 a {
@@ -46,7 +47,7 @@ li {
     font-family: var(--fuentePrincipal);
     border: none;
 }
-.contenedor{
+.contenedor {
     width: min(90%, 120rem);
     margin: 0 auto;
 }
@@ -60,9 +61,9 @@ li {
         justify-content: space-between;
         align-items: center;
     }
-} 
+}
 
-.titulo_recomendacion{
+.titulo_recomendacion {
     color: var(--primario);
 }
 .titulo_recomendacion,
@@ -71,21 +72,19 @@ li {
     text-align: center;
     font-family: var(--fuentePrincipal);
     padding-top: 4rem;
-    
 }
 .titulo_planes {
     color: var(--secundario);
 }
 
-.mejor{
+.mejor {
     font-family: var(--fuentePrincipal);
     color: var(--primario);
     text-transform: none;
     padding-top: 2rem;
     padding-bottom: 1rem;
     text-align: center;
-    border-bottom: .2rem solid var(--secundario);
-    
+    border-bottom: 0.2rem solid var(--secundario);
 }
 
 .planes {
@@ -95,8 +94,7 @@ li {
     text-align: center;
 }
 
-.aplicaciones{
-
+.aplicaciones {
     font-family: var(--fuentePrincipal);
     text-align: center;
     padding-top: 2.4rem;
@@ -105,7 +103,6 @@ li {
 .app_medias {
     margin-top: 0;
     padding-bottom: 5rem;
-    
 }
 
 .viaje {
@@ -114,7 +111,6 @@ li {
     border-radius: 12px;
     padding: 1.2rem;
     font-family: var(--fuentePrincipal);
-    
 }
 
 .btn_dias {
@@ -126,17 +122,16 @@ li {
     border: 3px solid var(--secundario);
     border-radius: 12px;
     padding: 1rem;
-    font-family:var(--fuentePrincipal);
+    font-family: var(--fuentePrincipal);
     text-align: center;
     width: 25rem;
 }
 
-.btn_plan{
+.btn_plan {
     padding-top: 2.6rem;
 }
 
 .plan:hover {
-
     cursor: pointer;
 }
 
@@ -144,13 +139,13 @@ li {
     cursor: pointer;
 }
 
-.tipodedatos{
+.tipodedatos {
     font-family: var(--fuentePrincipal);
     text-align: center;
     margin-top: 0;
 }
 
-.ambos_tipos{
+.ambos_tipos {
     padding-top: 2rem;
 }
 
@@ -162,7 +157,12 @@ li {
     padding: 1rem;
     width: auto;
     color: var(--blanco);
-    background: radial-gradient(ellipse at center, rgba(179,220,237,1) 0%, rgba(179,220,237,1) 34%, rgba(188,224,238,1) 100%);
+    background: radial-gradient(
+        ellipse at center,
+        rgba(179, 220, 237, 1) 0%,
+        rgba(179, 220, 237, 1) 34%,
+        rgba(188, 224, 238, 1) 100%
+    );
     text-transform: uppercase;
     border-radius: 74px 74px 74px 74px;
     -moz-border-radius: 74px 74px 74px 74px;
@@ -176,9 +176,7 @@ li {
     color: var(--blanco);
     text-transform: uppercase;
     font-family: var(--fuentePrincipal);
-
 }
-
 
 #envio_recomendar {
     background-color: var(--blanco);
@@ -191,15 +189,14 @@ li {
     width: 30rem;
 }
 
-.enviar_datos{
+.enviar_datos {
     display: flex;
     justify-content: center;
     padding-top: 6rem;
     padding-bottom: 2rem;
-}   
+}
 
-.opciones_app{
-
+.opciones_app {
     padding-top: 3.3rem;
 }
 
@@ -211,7 +208,6 @@ li {
 .uso_frecuente {
     padding-top: 3rem;
 }
-
 
 .datos_uso,
 .alta_capacidad,
@@ -231,26 +227,25 @@ li {
     width: 25rem;
 }
 
-.resultado{
+.resultado {
     font-family: var(--fuentePrincipal);
 
     padding-top: 3rem;
     color: var(--secundario);
 }
 
-.campo{
+.campo {
     padding-top: 2rem;
 }
 
-.datos_llamadas{
+.datos_llamadas {
     padding-top: 3.5rem;
-
 }
 
 .plan,
 .apps,
 .viaje:focus {
     outline: none !important;
-    border:.3rem solid var(--secundario);
-    box-shadow: 0 0 .2rem #719ECE;
+    border: 0.3rem solid var(--secundario);
+    box-shadow: 0 0 0.2rem #719ece;
 }

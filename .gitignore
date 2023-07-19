@@ -4,3 +4,4 @@ ssl/
 tmp/
 local_backups
 vendor/
+node_modules/
